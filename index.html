@@ -69,15 +69,27 @@
                 </div>
                 <p class="text text--fz-16 text--lh-auto text--center mb-20">Or <a class="text text--no-underline color-dodger-blue-light" href="https://manticore.cx/?p=signup">Create new account</a>
                 </p>
-                <form action="mail.php" method="post" class="box-out box-out--smaller">
-                    <div class="box box--no-top box--small-radius box--small-paddings">
-                        <div class="box__wrapper">
-                            <div class="box__wrapper-top box__wrapper-top--small"></div>
-                            <div class="box__wrapper-bottom box__wrapper-bottom--small"></div>
-                            <div class="box__inner">
-                                <div class="box__inner-bg box__inner-bg--fill"></div>
-                                <div class="box__inner-content">
-                                    <form class="form auth__form">
+                <form name="contact" method="POST" data-netlify="true">
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Your Role: <select name="role[]" multiple>
+      <option value="leader">Leader</option>
+      <option value="follower">Follower</option>
+    </select></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
+
                                         <div class="input mb-20">
                                             <p class="text text--fz-14 text--lh-auto text--fw-600 color-dodger-blue mb-10">You Username</p>
                                             <span class="input__box">
